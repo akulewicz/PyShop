@@ -33,8 +33,31 @@ class Potato:
         self.price = price
 
 
-if __name__ == '__main__':
-    red_apple = Apple()
-    green_apple = Apple()
-    print(f"Czerwone jabłko jest typu {type(red_apple)}.")
+def print_product(product):
+    print(f"Nazwa produktu: {product.name}, kategoria {product.product_category}, cena jednostkowa: {product.unit_price} PLN.")
 
+
+def print_order(order):
+    print("*"*20)
+    print(f"Zamówienie złożone przez {order.client_firstname} {order.client_lastname}")
+    print(f"Wartość zamówienia: {order.total_price}")
+    print("-" * 20)
+    print("Zamówione produkty:")
+    for product in order.products:
+        print_product(product)
+    print()
+    print("*" * 20)
+    print()
+
+
+
+
+if __name__ == '__main__':
+
+    products = [
+        Product('Komputer', 'elektronika', 1800),
+        Product('Monitos', 'elektronika', 800)
+    ]
+
+    order_one = Order('Jaś', 'Fasola', products)
+    print_order(order_one)
