@@ -1,16 +1,25 @@
-# This is a sample Python script.
+class Product:
+    pass
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+class Order:
+    pass
+
+class Apple:
+    pass
+
+class Potato:
+    pass
+
+orders = [Order(), Order(), Order(), Order(), Order()]
+
+products = {
+    "komputer": Product(),
+    "monitor": Product()
+}
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    red_apple = Apple()
+    green_apple = Apple()
+    print(f"Czerwone jabłko jest typu {type(red_apple)}.")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
