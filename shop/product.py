@@ -4,8 +4,7 @@ class Product:
         self.product_category = product_category
         self.unit_price = unit_price
 
-
-def print_product(product):
-    print(f"Nazwa produktu: {product.name}, kategoria {product.product_category}, cena jednostkowa: {product.unit_price} PLN.")
+    def print_self(self):
+        print(f"Nazwa produktu: {self.name}, kategoria {self.product_category}, cena jednostkowa: {self.unit_price} PLN.")
 
 
