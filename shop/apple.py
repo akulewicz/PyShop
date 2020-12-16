@@ -4,8 +4,11 @@ class Apple:
         self.size = size
         self.price = price
 
-    def apples_total_price(self, kilograms):
-        return self.price * kilograms
+    def calculate_price(self, quantity):
+        return self.price * quantity
+
+    def __repr__(self):
+        return f"<Apple species_name='{self.species_name}', size={self.size}, price={self.price}>"
 
 
 
